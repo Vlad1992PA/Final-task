@@ -10,7 +10,7 @@ Console.WriteLine("Hello, World!");
 
 int count = 4; // размер массива (можно поставить любой или при желание дать пользователю ввести с клавиатуры)
 string[] arrya = new string[count];
-int length_arrya = 3;
+int length_arrya = 3; //максимальная длинна для отбора
 
 
 string GetArray() {
@@ -29,7 +29,7 @@ string[] array = MetGetArray();
 
 // met_new_array метод сравнение и получения нового масива
 int MetСomparisonArray() {    
-    int count2 = 0;
+    int count2 = 0; // счетчик нужных чисел
     for (int j = 0; j < count; j++)
     {        if (length_arrya <= array[j].Length)   {count2++;}    }
     return count2;
@@ -37,7 +37,7 @@ int MetСomparisonArray() {
 
 string[] MetNewArray()  {
     string[] arrya_end = new string[MetСomparisonArray()];
-    int count3 = 0;
+    int count3 = 0; // счётчик индекса массива arrya_end
     for (int j = 0; j < count; j++)    {
         if (length_arrya <= array[j].Length)        {
             arrya_end[count3] = array[j];
